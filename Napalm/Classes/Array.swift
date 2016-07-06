@@ -14,7 +14,7 @@ public extension Array {
     /**
      Randomly selects a random item from an array and returns it.
      */
-    public func randomObject() -> Element {
+    public func random() -> Element {
         if #available(iOS 9.0, *) {
             let randomNumber = GKRandomSource.sharedRandom().nextInt(withUpperBound: self.count)
             return self[randomNumber]
@@ -36,10 +36,10 @@ public extension Array {
         while returnArray.count < length {
             if let lsObj = returnArray.last {
                 repeat {
-                    currentObject = self.randomObject()
+                    currentObject = self.random()
                 } while "\(currentObject)" == "\(lsObj)"
             } else {
-                currentObject = self.randomObject()
+                currentObject = self.random()
             }
             returnArray.append(currentObject)
         }
@@ -49,7 +49,7 @@ public extension Array {
     /**
      Removes the object from an array that is passed in.
      */
-    public mutating func removeObject(_ object: Element) {
+    public mutating func remove(_ object: Element) {
         var array: [String] = []
         for i in self {
             array.append("\(i)")

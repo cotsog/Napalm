@@ -12,7 +12,7 @@ import AVFoundation
 
 public class NPFAudio {
     
-    init() {}
+    public init() {}
     
     /**
      This enum is used in setting the proper file type in the playSimpleAudio function.

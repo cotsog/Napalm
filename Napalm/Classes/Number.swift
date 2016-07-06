@@ -11,7 +11,7 @@ import GameplayKit
 
 public class NPFNumber {
     
-    init() {}
+    public init() {}
     
     /**
      Generates a random number between the Ints that are passed in.
