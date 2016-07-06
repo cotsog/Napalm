@@ -12,26 +12,26 @@ public let NPFNetworkingErrorDomain = "com.napalm.Napalm.NetworkingError"
 public let MissingHTTPResponseError: Int = 10
 public let UnexpectedResponseError: Int = 20
 
-typealias JSON = [String : AnyObject]
-typealias JSONTaskCompletion = (JSON?, HTTPURLResponse?, NSError?) -> Void
-typealias JSONTask = URLSessionDataTask
+public typealias JSON = [String : AnyObject]
+public typealias JSONTaskCompletion = (JSON?, HTTPURLResponse?, NSError?) -> Void
+public typealias JSONTask = URLSessionDataTask
 
-enum APIResult<T> {
+public enum APIResult<T> {
     case success(T)
     case failure(ErrorProtocol)
 }
 
-protocol JSONDecodable {
+public protocol JSONDecodable {
     init?(JSON: [String : AnyObject])
 }
 
-protocol Endpoint {
+public protocol Endpoint {
     var baseURL: URL { get }
     var path: String { get }
     var request: URLRequest { get }
 }
 
-protocol APIClient {
+public protocol APIClient {
     var configuration: URLSessionConfiguration { get }
     var session: URLSession { get }
     

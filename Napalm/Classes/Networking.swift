@@ -14,19 +14,19 @@ public protocol JSONInitable {
 
 public class NPFNetwork: APIClient {
     
-    let configuration: URLSessionConfiguration
-    lazy var session: URLSession = {
+    public let configuration: URLSessionConfiguration
+    lazy public var session: URLSession = {
         return URLSession(configuration: self.configuration)
     }()
     
     public let url: String
     
-    init(config: URLSessionConfiguration, URL: String) {
+    public init(config: URLSessionConfiguration, URL: String) {
         self.configuration = config
         self.url = URL
     }
     
-    convenience init(URL: String) {
+    public convenience init(URL: String) {
         self.init(config: URLSessionConfiguration.default(), URL: URL)
     }
     
@@ -35,7 +35,7 @@ public class NPFNetwork: APIClient {
         return URLRequest(url: url!)
     }
     
-    func fetchData<T: JSONInitable>(withCompletion completion: (APIResult<T>) -> Void) {
+    public func fetchData<T: JSONInitable>(withCompletion completion: (APIResult<T>) -> Void) {
         
         fetch(request, parse: { json -> T? in
             // Parse from JSON response to CurrentWeather
