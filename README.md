@@ -1,8 +1,5 @@
 ![](https://github.com/Napalm-Framework/Napalm/blob/master/Example/napalm-header.png)
 
-**_Currently fixing an Apple Match - O Linker Error_**
-    linker command failed with exit code 1 (use -v to see invocation)
-
 # Napalm
 
 [![CI Status](http://img.shields.io/travis/Caleb/Napalm.svg?style=flat)](https://travis-ci.org/Caleb/Napalm)

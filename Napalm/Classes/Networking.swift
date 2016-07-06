@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol Initable {
+public protocol JSONInitable {
     init?(JSON: [String : AnyObject])
 }
 
@@ -35,8 +35,7 @@ public class NPFNetwork: APIClient {
         return URLRequest(url: url!)
     }
     
-    
-    func fetchData<T: Initable>(withCompletion completion: (APIResult<T>) -> Void) {
+    func fetchData<T: JSONInitable>(withCompletion completion: (APIResult<T>) -> Void) {
         
         fetch(request, parse: { json -> T? in
             // Parse from JSON response to CurrentWeather
