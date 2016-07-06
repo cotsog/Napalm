@@ -22,8 +22,13 @@ Napalm is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "Napalm", :git => 'https://github.com/Napalm-Framework/Napalm.git'
+target '<Target-Name>' do
+    pod "Napalm", :git => 'https://github.com/Napalm-Framework/Napalm.git', :commit => '<Commit-Number>'
+end
+
 ```
+
+You can get the commit number from [here](https://github.com/Napalm-Framework/Napalm/commits/master)
 
 ## Documentation
 

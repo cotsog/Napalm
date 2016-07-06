@@ -153,4 +153,3 @@ public class NPFBluetooth: BKAvailabilityObserver, BKCentralDelegate, BKPeripher
 
 
 
-

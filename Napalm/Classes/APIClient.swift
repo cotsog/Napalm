@@ -40,7 +40,7 @@ public protocol APIClient {
 }
 
 extension APIClient {
-    func JSONTaskWithRequest(_ request: URLRequest, completion: JSONTaskCompletion) -> JSONTask {
+    public func JSONTaskWithRequest(_ request: URLRequest, completion: JSONTaskCompletion) -> JSONTask {
         
         let task = session.dataTask(with: request) { data, response, error in
             
@@ -75,7 +75,7 @@ extension APIClient {
         return task
     }
     
-    func fetch<T>(_ request: URLRequest, parse: (JSON) -> T?, completion: (APIResult<T>) -> Void) {
+    public func fetch<T>(_ request: URLRequest, parse: (JSON) -> T?, completion: (APIResult<T>) -> Void) {
         
         let task = JSONTaskWithRequest(request) { json, response, error in
             
