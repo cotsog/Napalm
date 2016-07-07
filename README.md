@@ -1,5 +1,7 @@
 ![](https://github.com/Napalm-Framework/Napalm/blob/master/Example/napalm-header.png)
 
+**_ Due to this pod requiring a Swift 3 version of BluetoothKit, it is currently broken _**
+
 # Napalm
 
 [![CI Status](http://img.shields.io/travis/Caleb/Napalm.svg?style=flat)](https://travis-ci.org/Caleb/Napalm)
