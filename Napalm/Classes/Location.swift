@@ -9,11 +9,30 @@
 import CoreLocation
 import Foundation
 
-let locationManager = CLLocationManager()
-
-public class NPFLocation {
+public class NPFLocation: NSObject, CLLocationManagerDelegate {
     
-    public init () {}
+    public enum GetAppLocation {
+        case whenInUse
+        case always
+    }
+    
+    var locationManager: CLLocationManager
+    
+    public init (locationManger: CLLocationManager) {
+        self.locationManager = locationManger
+        super.init()
+        locationManager.delegate = self
+        
+    }
+    
+    public func getPermissionFromUser(duringTime: GetAppLocation) {
+        if CLLocationManager.authorizationStatus() == .notDetermined {
+            switch duringTime {
+            case .whenInUse: locationManager.requestWhenInUseAuthorization()
+            case .always: locationManager.requestAlwaysAuthorization()
+            }
+        }
+    }
     
     public func coordinate() -> (latitude: Float?, longitude: Float?) {
         guard let lat = locationManager.location?.coordinate.latitude,
@@ -111,4 +130,9 @@ public class NPFLocation {
         })
         return returnAddress
     }
+    
 }
+
+
+
+

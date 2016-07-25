@@ -8,10 +8,6 @@
 
 import Foundation
 
-public protocol JSONInitable {
-    init?(JSON: [String : AnyObject])
-}
-
 public class NPFNetwork: APIClient {
     
     public let configuration: URLSessionConfiguration
@@ -35,13 +31,13 @@ public class NPFNetwork: APIClient {
         return URLRequest(url: url!)
     }
     
-    public func fetchData<T: JSONInitable>(withCompletion completion: (APIResult<T>) -> Void) {
+    public func fetchData<T: JSONDecodable>(withCompletion completion: (APIResult<T>) -> Void, andJSONKey key: String) {
         
         fetch(request, parse: { json -> T? in
             // Parse from JSON response to CurrentWeather
             
-            if let currentWeatherDictionary = json["currently"] as? [String : AnyObject] {
-                return T(JSON: currentWeatherDictionary)
+            if let dataDictionary = json[key] as? [String : AnyObject] {
+                return T(JSON: dataDictionary)
             } else {
                 return nil
             }

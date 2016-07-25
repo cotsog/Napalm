@@ -16,7 +16,7 @@ public class NPFNumber {
     /**
      Generates a random number between the Ints that are passed in.
      */
-    public func randomNumber(between lowNumber: Int, and highNumber: Int) -> Int {
+    public class func randomNumber(between lowNumber: Int, and highNumber: Int) -> Int {
         if #available(iOS 9.0, *) {
             let randomNumber = GKRandomSource.sharedRandom().nextInt(withUpperBound: highNumber - lowNumber) + lowNumber
             return randomNumber
