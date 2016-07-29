@@ -20,7 +20,10 @@ public extension UIView {
     }
     
     /**
-     Adds a boarder to the bottom of a UIView with the color and width passed in. The width is set with a default of 1.
+     Adds a boarder to the bottom of a UIView.
+     
+     - parameter color: A UIColor setting the color of the boarder.
+     - parameter height: The height of the boarder in pixels. Default is set to 1.
      */
     public func addBottomBorder(withColor color: UIColor, andHeight height: CGFloat = 1) {
         let lineView = UIView(frame: CGRect(x: 0, y: self.frame.size.height - 1.0, width: self.frame.size.width, height: height))
@@ -29,7 +32,10 @@ public extension UIView {
     }
     
     /**
-     Adds a boarder to the top of a UIView with the color and height passed in. The height is set with a default of 1.
+     Adds a boarder to the top of a UIView.
+     
+     - parameter color: A UIColor setting the color of the boarder.
+     - parameter height: The height of the boarder in pixels. Default is set to 1.
      */
     public func addTopBorder(withColor color: UIColor, andHeight height: CGFloat = 1) {
         let lineView = UIView(frame: CGRect(x: 0, y: 0, width: self.frame.size.width, height: height))
@@ -38,7 +44,10 @@ public extension UIView {
     }
     
     /**
-     Adds a boarder to the left of a UIView with the color and width passed in. The width is set with a default of 1.
+     Adds a boarder to the left of a UIView.
+     
+     - parameter color: A UIColor setting the color of the boarder.
+     - parameter height: The height of the boarder in pixels. Default is set to 1.
      */
     public func addLeftBorder(withColor color: UIColor, andWidth width: CGFloat = 1) {
         let lineView = UIView(frame: CGRect(x: 1, y: 0, width: width, height: self.frame.size.height))
@@ -47,7 +56,10 @@ public extension UIView {
     }
     
     /**
-     Adds a boarder to the bottom of a UIView with the color and width passed in. The width is set with a default of 1.
+     Adds a boarder to the bottom of a UIView.
+     
+     - parameter color: A UIColor setting the color of the boarder.
+     - parameter height: The height of the boarder in pixels. Default is set to 1.
      */
     public func addRightBorder(withColor color: UIColor, andWidth width: CGFloat = 1) {
         let lineView = UIView(frame: CGRect(x: 1, y: 1, width: width, height: self.frame.size.height))
@@ -56,9 +68,13 @@ public extension UIView {
     }
     
     /**
-     Animates the view to the set point on the Y axis with a duration of the CGPoint and TimeInterval passed in. The animation options can also be changed.
+     Animates the view to the set point on the Y axis.
      
      **WARNING:** This function appears to be broken.
+     
+     - parameter origin: The point on the Y axis that the view is animated to.
+     - parameter duration: How long the animation takes in seconds.
+     - parameter option: Any UIViewAnimationOption to change the way the animation runs.
      */
     func toggleViewOnY(to origin: CGFloat, withDuration duration: TimeInterval, andOptions option: UIViewAnimationOptions = UIViewAnimationOptions()) {
         var menuFrame = self.frame
@@ -74,9 +90,13 @@ public extension UIView {
     }
     
     /**
-     Animates the view to the set point on the X axis with a duration of the CGPoint and TimeInterval passed in. The animation options can also be changed.
+     Animates the view to the set point on the X axis.
      
      **WARNING:** This function appears to be broken.
+     
+     - parameter origin: The point on the X axis that the view is animated to.
+     - parameter duration: How long the animation takes in seconds.
+     - parameter option: Any UIViewAnimationOption to change the way the animation runs.
      */
     func toggleViewOnX(to origin: CGFloat, withDuration duration: TimeInterval, andOptions option: UIViewAnimationOptions = UIViewAnimationOptions()) {
         var menuFrame = self.frame
@@ -91,12 +111,16 @@ public extension UIView {
     }
     
     /**
-     Adds a gradient to the view going from the first color to the second color passed in. The depth, which is default to the back of the parent view, can be changed.
+     Adds a gradient to the UIView.
      
      **WARNING:** This function appears to be broken and only works on a UIViewControllers view.
+     
+     - parameter topColor: The color that is for the top of the gradient.
+     - parameter bottomColor: The color that is for the bottom of the gradient.
+     - parameter depth: Whether the view gets sent to the back of the parent view or not. Default value is `.back`.
      */
     public func addGradient(from topColor: UIColor, to bottomColor: UIColor, withDepth depth: UIViewDepth = .back) {
-        let gradient = GradientView(tColor: topColor, bColor: bottomColor, frame: self.frame)
+        let gradient = GradientView(topColor: topColor, bottomColor: bottomColor, frame: self.frame)
         self.addSubview(gradient)
         
         switch depth {

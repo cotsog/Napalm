@@ -11,27 +11,49 @@ import BluetoothKit
 
 public class NPFBluetooth: BKAvailabilityObserver, BKCentralDelegate, BKPeripheralDelegate {
     
+    /**
+     A BKPeripheral for setting up the devices peripheral.
+    */
     public let peripheral = BKPeripheral()
+    
+    /**
+     A BKCentral for use in setting up the devices central.
+    */
     public let central = BKCentral()
     
     /**
-     A string with a UUID for creating the peripheral and central.
+     A string with a Unique Device ID (UUID) for creating the peripheral and central.
     */
     let service: String
+    
     /**
-     A string with a UUID for creating the peripheral and central.
-     */
+     A string with a Unique Device ID (UUID) for creating the peripheral and central.
+    */
     let characteristic: String
+    
     /**
      An array containing all of the remote peripherals that are detected.
     */
     public var remotePeripherals: [BKRemotePeripheral] = []
-    public var discoveries: [BKDiscovery] = []
+    
     /**
-     The current state of scanning for remote peripherals
+     An array containing all of the discoveries that are detected.
+     */
+    public var discoveries: [BKDiscovery] = []
+    
+    /**
+     The current state of scanning for remote peripherals.
     */
     public var scanState: BKCentral.ContinuousScanState = .stopped
     
+    /**
+     Initilizes an instance of NPFBluetooth with a serviceUUID and a characteristicUUID.
+     
+     - parameter serviceUUID: A String with a UUID for the service.
+     - parameter characteristicUUID: A String with a UUID for the characteristic.
+     
+     Return: An instance of NPFBluetooth with a serviceUUID and a characteristicUUID.
+    */
     public init(serviceUUID: String, characteristicUUID: String) {
         service = serviceUUID
         characteristic = characteristicUUID
@@ -52,10 +74,11 @@ public class NPFBluetooth: BKAvailabilityObserver, BKCentralDelegate, BKPeripher
     }
     
     /**
-     Creates a peripheral
+     Creates a peripheral so other divices can connect to the current device.
      
-     - Parameters:
-        - name: The name of the peripheral
+     - parameter name: The name of the peripheral.
+     
+     - throws: `InitilizationError.peripheralCreationError` if an error occured while creating the peripheral.
     */
     public func createPeripheral(withName name: String)throws {
         peripheral.delegate = self
@@ -72,7 +95,9 @@ public class NPFBluetooth: BKAvailabilityObserver, BKCentralDelegate, BKPeripher
     }
     
     /**
-     Creates a central
+     Creates a central so the device can get data from other devices.
+     
+     - throws: `InitilizationError.centralCreationError` if an error occured while creating the central.
     */
     public func createCentral()throws {
         central.delegate = self
@@ -89,10 +114,9 @@ public class NPFBluetooth: BKAvailabilityObserver, BKCentralDelegate, BKPeripher
     }
     
     /**
-     Scans for remote peripherals for the amount of time passed in
+     Scans for remote peripherals.
      
-     - Parameters:
-        - time: The amount of time in second the central will scan for.
+     - parameter time: The amount of time in second the central will scan for.
     */
     public func scanForPeripherals(forTimePeriod time: TimeInterval) {
         central.scanWithDuration(time, progressHandler: { newDiscoveries in
@@ -108,9 +132,8 @@ public class NPFBluetooth: BKAvailabilityObserver, BKCentralDelegate, BKPeripher
     /**
      Scans for remote peripherals continuously with breaks.
      
-     - Parameters:
-        - scanInterval: The amount of time in second the central will scan for.
-        - breakInterval: The amount of time that goes by after scanning before the central scans again
+     - parameter scanInterval: The amount of time in second the central will scan for.
+     - parameter breakInterval: The amount of time that goes by after scanning before the central scans again.
     */
     public func scanContinuouslyForPeripherals(withInterval scanInterval: TimeInterval, andBreakTime breakInterval: TimeInterval) {
         central.scanContinuouslyWithChangeHandler({ changes, discoveries in
@@ -136,8 +159,7 @@ public class NPFBluetooth: BKAvailabilityObserver, BKCentralDelegate, BKPeripher
     /**
      Sends data to all the remote centrals that are connected.
      
-     - Parameters:
-        - data: A string of the data that will be sent to all remote centrals.
+     - parameter data: A string of the data that will be sent to all remote centrals.
     */
     public func sendDataToRemoteCentrals(data: String) {
 

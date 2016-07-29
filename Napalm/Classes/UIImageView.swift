@@ -12,16 +12,20 @@ import UIKit
 public extension UIImageView {
     
     /**
-     Takes in an Array of UIImages, an Int and a Double and creates an image based animation for the image view.
+     Initilizes a UIImageView's animation properties.
+     
+     - parameter images: The array of images that is used for the animation.
+     - parameter repeatCount: The amount of times the animation is run.
+     - parameter duration: How long the animation takes in seconds.
      */
-    public func imageAnimation(_ images: [UIImage], repeatCount: Int, duration: Double) {
+    public func imageAnimation(images: [UIImage], repeatCount: Int, duration: Double) {
         self.animationImages = images
         self.animationRepeatCount = repeatCount
         self.animationDuration = duration
     }
     
     /**
-     Adds a sub-view of the image to blur it.
+     Adds a sub-view to the UIImageView to blur it.
      
      **WARNING:** This function appears to be broken.
      */

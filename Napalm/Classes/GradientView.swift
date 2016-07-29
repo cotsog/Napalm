@@ -26,10 +26,16 @@ class GradientView: UIView {
     
     /**
      Used to initilize the gradient colors and frame of the view.
+     
+     - parameter topColor: The color that is for the top of the gradient.
+     - parameter bottomColor: The color that is for the bottom of the gradient.
+     - parameter frame: A CGRect with the size and position of the gradient view.
+    
+     - return: A UIView with a gradient on it.
      */
-    public init(tColor: UIColor, bColor: UIColor, frame: CGRect) {
-        topColor = tColor
-        bottomColor = bColor
+    public init(topColor: UIColor, bottomColor: UIColor, frame: CGRect) {
+        self.topColor = topColor
+        self.bottomColor = bottomColor
         super.init(frame: frame)
     }
 
@@ -37,7 +43,9 @@ class GradientView: UIView {
     // An empty implementation adversely affects performance during animation.
     
     /**
-     Takes the colors that where passed in during intilization and draws a gradient on the view.
+     Creates the gradient on the view.
+     
+     - parameter rect: The CGRect designating the size and position of the gradient.
      */
     override func draw(_ rect: CGRect) {
         

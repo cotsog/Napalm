@@ -44,6 +44,9 @@ public class NPFAudio {
     
     /**
      Plays an audio file with the name and file extension passed in. Uses the simple audio types of .wav, .caf and .aif that are supported by AudioServices.
+     
+     - parameter fileName: This is the name of the file *without* the extension.
+     - parameter fileExtension: The extension of the file. This comes from the SimpleAudioFileType enum.
      */
     public class func playSimpleAudio(withFileName fileName: String, andExtension fileExtension: SimpleAudioFileType) {
         
@@ -69,6 +72,9 @@ public class NPFAudio {
     
     /**
      Plays an audio file with the name and file extension passed in. Uses the audio types that are not supported by AudioServices such as .m4a and .mp3.
+     
+     - parameter fileName: This is the name of the file *without* the extension.
+     - parameter fileExtension: The extension of the file. This comes from the AudioFileType enum.
      */
     public class func playAudio(withFileName fileName: String, andExtension fileExtension: AudioFileType) {
         
