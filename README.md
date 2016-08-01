@@ -34,7 +34,11 @@ You can get the commit number from [here](https://github.com/Napalm-Framework/Na
 
 ## Documentation
 
-You can find the documentation wiki [here](https://github.com/Napalm-Framework/Napalm/wiki/Documentation).
+You can find documentation [here](https://napalm-framework.github.io/Napalm/docs/index.html).
+
+## Attribution
+
+Thnks to all the [contributers](https://github.com/Napalm-Framework/Napalm/blob/master/Attribution.md)!
 
 ## Author
 

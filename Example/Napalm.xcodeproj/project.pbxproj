@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		50C8771847F66FD587627E91 /* Pods_Napalm_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31D16C3B23FB3603905BDB99 /* Pods_Napalm_Tests.framework */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		A46AF5781D4FBD3000766CC8 /* Attribution.md in Sources */ = {isa = PBXBuildFile; fileRef = A46AF5771D4FBD3000766CC8 /* Attribution.md */; };
 		A47B703F1D2C52D600EBFF12 /* napalm-header.png in Resources */ = {isa = PBXBuildFile; fileRef = A47B703E1D2C52D600EBFF12 /* napalm-header.png */; };
 /* End PBXBuildFile section */
 
@@ -22,6 +23,7 @@
 		6868F42ED3B3923A2940B344 /* Pods-Napalm_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Napalm_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Napalm_Tests/Pods-Napalm_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		8F5D24DF7D5581C54A4F0C68 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		9C81385D2466B1A9CD488259 /* Pods-Napalm_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Napalm_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Napalm_Tests/Pods-Napalm_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		A46AF5771D4FBD3000766CC8 /* Attribution.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Attribution.md; sourceTree = "<group>"; };
 		A47B703E1D2C52D600EBFF12 /* napalm-header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "napalm-header.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +99,7 @@
 				2CF2419D8EB4DB932BABD8A2 /* Napalm.podspec */,
 				8F5D24DF7D5581C54A4F0C68 /* README.md */,
 				2DD3FA452FB3A22D804F7DAC /* LICENSE */,
+				A46AF5771D4FBD3000766CC8 /* Attribution.md */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A46AF5781D4FBD3000766CC8 /* Attribution.md in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
