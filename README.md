@@ -38,7 +38,7 @@ You can find documentation [here](https://napalm-framework.github.io/Napalm/docs
 
 ## Attribution
 
-Thnks to all the [contributers](https://github.com/Napalm-Framework/Napalm/blob/master/Attribution.md)!
+Thnks to all the [contributers](https://github.com/Napalm-Framework/Napalm/blob/master/Example/Attribution.md)!
 
 ## Author
 
