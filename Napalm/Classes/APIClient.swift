@@ -8,40 +8,87 @@
 
 import Foundation
 
+/**
+ The error domain when there is an error from NSError.
+*/
 public let NPFNetworkingErrorDomain = "com.napalm.Napalm.NetworkingError"
+
+/**
+ The error used when there is no HTTP response.
+*/
 public let MissingHTTPResponseError: Int = 10
+
+/**
+ The error used when the HTTP response is not 200.
+*/
 public let UnexpectedResponseError: Int = 20
 
+/**
+ A typealias for data in a JSON format.
+*/
 public typealias JSON = [String : AnyObject]
+
+/**
+ A typealias for the data received after getting JSON data.
+*/
 public typealias JSONTaskCompletion = (JSON?, HTTPURLResponse?, NSError?) -> Void
+
+/**
+ A typealias for a getting data from a URL session.
+*/
 public typealias JSONTask = URLSessionDataTask
 
+/**
+ The resault of parsing the JSON worked.
+*/
 public enum APIResult<T> {
     case success(T)
     case failure(ErrorProtocol)
 }
 
+/**
+ Used as a constraint for the generic types in the fetch and fetchData methods.
+*/
 public protocol JSONDecodable {
     init?(JSON: [String : AnyObject])
 }
 
-public protocol Endpoint {
-    var baseURL: URL { get }
-    var path: String { get }
-    var request: URLRequest { get }
-}
+//public protocol Endpoint {
+//    var baseURL: URL { get }
+//    var path: String { get }
+//    var request: URLRequest { get }
+//}
 
+/**
+ Used to connect to the remote API to get JSON data.
+*/
 public protocol APIClient {
     var configuration: URLSessionConfiguration { get }
     var session: URLSession { get }
     
-    func JSONTaskWithRequest(_ request: URLRequest, completion: JSONTaskCompletion) -> JSONTask
+    /**
+     Attempts to get the JSON data from a request.
+     
+     - parameter request: A URLRequest created from a URL to get the data from.
+     - parameter completion: A closure with the JSON data, an HTTPURLResponse and an NSError.
+     
+     - returns: A URLSessionDataTask with the data if it is received.
+     */
+    func jsonTask(withRequest request: URLRequest, completion: JSONTaskCompletion) -> JSONTask
+    
+    /**
+     Parses the JSON data from jsonTask and passes it to the completion.
+     
+     - parameter request: A URLRequest made from a URL.
+     - parameter parse: A closure where the JSON data gets converted to the proper type.
+     - parameter completion: A closure where the success case does depending on if the parsing works.
+     */
     func fetch<T: JSONDecodable>(_ request: URLRequest, parse: (JSON) -> T?, completion: (APIResult<T>) -> Void)
 }
 
 extension APIClient {
     
-    public func JSONTaskWithRequest(_ request: URLRequest, completion: JSONTaskCompletion) -> JSONTask {
+    public func jsonTask(withRequest request: URLRequest, completion: JSONTaskCompletion) -> JSONTask {
         
         let task = session.dataTask(with: request) { data, response, error in
             
@@ -78,7 +125,7 @@ extension APIClient {
     
     public func fetch<T>(_ request: URLRequest, parse: (JSON) -> T?, completion: (APIResult<T>) -> Void) {
         
-        let task = JSONTaskWithRequest(request) { json, response, error in
+        let task = jsonTask(withRequest: request) { json, response, error in
             
             DispatchQueue.main.async {
                 guard let json = json else {
