@@ -10,9 +10,10 @@ import Foundation
 import AudioToolbox
 import AVFoundation
 
+/**
+ For easily playing audio files.
+*/
 public class NPFAudio {
-    
-    public init() {}
     
     /**
      This enum is used in setting the proper file type in the playSimpleAudio function.

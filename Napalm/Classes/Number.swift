@@ -9,9 +9,10 @@
 import Foundation
 import GameplayKit
 
+/**
+ For doing math and querying numbers.
+*/
 public class NPFNumber {
-    
-    public init() {}
     
     /**
      Generates a random number between two Ints.

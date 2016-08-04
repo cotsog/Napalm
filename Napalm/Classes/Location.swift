@@ -9,6 +9,9 @@
 import CoreLocation
 import Foundation
 
+/**
+ Get information about a devices current location.
+*/
 public class NPFLocation: NSObject, CLLocationManagerDelegate {
     
     /**

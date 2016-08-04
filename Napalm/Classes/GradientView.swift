@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ For giving UI elements gradients.
+*/
 class GradientView: UIView {
     
     /**

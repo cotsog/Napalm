@@ -9,6 +9,9 @@
 import Foundation
 import BluetoothKit
 
+/**
+ Allows interacting with other devices via LEB.
+*/
 public class NPFBluetooth: BKAvailabilityObserver, BKCentralDelegate, BKPeripheralDelegate {
     
     /**

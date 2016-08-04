@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ An easy interface for getting JSON data from a URL.
+*/
 public class NPFNetwork: APIClient {
     
     public let configuration: URLSessionConfiguration
