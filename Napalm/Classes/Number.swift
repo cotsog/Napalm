@@ -35,4 +35,16 @@ public class NPFNumber {
         }
         
     }
+    
+    
+    /**
+     Converts a number in degrees to a number in raidians.
+     
+     - parameter degrees: A Double that is the number converted to raidians.
+    
+     - returns: A number in raidian form.
+    */
+    public class func convertToRadians(degrees: Double) -> Double {
+       return  (degrees / 180) * Double.pi
+    }
 }
