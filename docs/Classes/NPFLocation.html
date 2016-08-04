@@ -14,7 +14,7 @@
     <a title="NPFLocation Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (59% documented)</p>
+        <p><a href="../index.html"> Docs</a> (65% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -132,7 +132,13 @@
         <section>
           <section class="section">
             <h1>NPFLocation</h1>
-            <p>Undocumented</p>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">NPFLocation</span><span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">CLLocationManagerDelegate</span></code></pre>
+
+                </div>
+              </div>
+            <p>Get information about a devices current location.</p>
 
           </section>
           <section class="section task-group-section">
@@ -181,6 +187,10 @@
                       <div class="abstract">
                         <p>Creates an instance of NPFLocation with a location manager. The location manager delegate is also assigned.</p>
 
+<ul>
+<li><p>return: An instance of NPFLocation with a location manager.</p></li>
+</ul>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -209,11 +219,6 @@
                             </tr>
                           </tbody>
                         </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>An instance of NPFLocation with a location manager.</p>
-
                       </div>
                     </section>
                   </div>
@@ -408,6 +413,8 @@
                       <div class="abstract">
                         <p>Gets the location the device is in (i.e. Apple Store). Returns <q>N/A</q> if there is an error getting the location name.</p>
 
+<p>Returns: A String with the location name.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -416,11 +423,6 @@
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getLocationName</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>A String with the location name.</p>
-
                       </div>
                     </section>
                   </div>
@@ -440,6 +442,8 @@
                       <div class="abstract">
                         <p>Gets the street the device is on. Returns <q>N/A</q> if there is an error getting the street.</p>
 
+<p>Returns: A String with the street name.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -448,11 +452,6 @@
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getStreetAddress</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>A String with the street name.</p>
-
                       </div>
                     </section>
                   </div>
