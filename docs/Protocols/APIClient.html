@@ -14,7 +14,7 @@
     <a title="APIClient Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (47% documented)</p>
+        <p><a href="../index.html"> Docs</a> (59% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -108,10 +108,21 @@
                 <a href="../Protocols/APIClient.html">APIClient</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/Endpoint.html">Endpoint</a>
+                <a href="../Protocols/JSONDecodable.html">JSONDecodable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Typealiases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:11NapalmJazzy4JSON">JSON</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/JSONDecodable.html">JSONDecodable</a>
+                <a href="../Typealiases.html#/s:11NapalmJazzy8JSONTask">JSONTask</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:11NapalmJazzy18JSONTaskCompletion">JSONTaskCompletion</a>
               </li>
             </ul>
           </li>
@@ -121,7 +132,13 @@
         <section>
           <section class="section">
             <h1>APIClient</h1>
-            <p>Undocumented</p>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">APIClient</span></code></pre>
+
+                </div>
+              </div>
+            <p>Used to connect to the remote API to get JSON data.</p>
 
           </section>
           <section class="section task-group-section">
@@ -143,6 +160,14 @@
                         <p>Undocumented</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">APIClient</span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -162,15 +187,23 @@
                         <p>Undocumented</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">APIClient</span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FP11NapalmJazzy9APIClient19JSONTaskWithRequestFTV10Foundation10URLRequest10completionFTGSqGVs10DictionarySSPs9AnyObject___GSqCSo15HTTPURLResponse_GSqCSo7NSError__T__CSo18URLSessionDataTask"></a>
-                    <a name="//apple_ref/swift/Method/JSONTaskWithRequest(_:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FP11NapalmJazzy9APIClient19JSONTaskWithRequestFTV10Foundation10URLRequest10completionFTGSqGVs10DictionarySSPs9AnyObject___GSqCSo15HTTPURLResponse_GSqCSo7NSError__T__CSo18URLSessionDataTask">JSONTaskWithRequest(_:completion:)</a>
+                    <a name="/s:FP11NapalmJazzy9APIClient8jsonTaskFT11withRequestV10Foundation10URLRequest10completionFTGSqGVs10DictionarySSPs9AnyObject___GSqCSo15HTTPURLResponse_GSqCSo7NSError__T__CSo18URLSessionDataTask"></a>
+                    <a name="//apple_ref/swift/Method/jsonTask(withRequest:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP11NapalmJazzy9APIClient8jsonTaskFT11withRequestV10Foundation10URLRequest10completionFTGSqGVs10DictionarySSPs9AnyObject___GSqCSo15HTTPURLResponse_GSqCSo7NSError__T__CSo18URLSessionDataTask">jsonTask(withRequest:completion:)</a>
                     </code>
                       <span class="declaration-note">
                         Default implementation
@@ -181,12 +214,58 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Attempts to get the JSON data from a request.</p>
 
                       </div>
                       <h4>Default Implementation</h4>
                       <div class="default_impl abstract">
                         <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">jsonTask</span><span class="p">(</span><span class="n">withRequest</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:11NapalmJazzy18JSONTaskCompletion">JSONTaskCompletion</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:11NapalmJazzy8JSONTask">JSONTask</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>request</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A URLRequest created from a URL to get the data from.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure with the JSON data, an HTTPURLResponse and an NSError.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A URLSessionDataTask with the data if it is received.</p>
 
                       </div>
                     </section>
@@ -208,13 +287,67 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Parses the JSON data from jsonTask and passes it to the completion.</p>
 
                       </div>
                       <h4>Default Implementation</h4>
                       <div class="default_impl abstract">
                         <p>Undocumented</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="n">fetch</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/JSONDecodable.html">JSONDecodable</a></span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">,</span> <span class="nv">parse</span><span class="p">:</span> <span class="p">(</span><span class="kt"><a href="../Typealiases.html#/s:11NapalmJazzy4JSON">JSON</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">?,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">(</span><span class="kt"><a href="../Enums/APIResult.html">APIResult</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>request</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A URLRequest made from a URL.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parse</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure where the JSON data gets converted to the proper type.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure where the success case does depending on if the parsing works.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -224,7 +357,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-08-02)</p>
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-08-04)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
