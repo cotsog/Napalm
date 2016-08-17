@@ -25,7 +25,7 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 target '<Target-Name>' do
-    pod "Napalm", :git => 'https://github.com/Napalm-Framework/Napalm.git', :commit => '<Commit-Number>'
+pod "Napalm", :git => 'https://github.com/Napalm-Framework/Napalm.git', :commit => '<Commit-Number>'
 end
 
 ```
