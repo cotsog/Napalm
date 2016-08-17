@@ -55,7 +55,7 @@ public class NPFBluetooth: BKAvailabilityObserver, BKCentralDelegate, BKPeripher
      - parameter serviceUUID: A String with a UUID for the service.
      - parameter characteristicUUID: A String with a UUID for the characteristic.
      
-     Return: An instance of NPFBluetooth with a serviceUUID and a characteristicUUID.
+     - return: An instance of NPFBluetooth with a serviceUUID and a characteristicUUID.
     */
     public init(serviceUUID: String, characteristicUUID: String) {
         service = serviceUUID

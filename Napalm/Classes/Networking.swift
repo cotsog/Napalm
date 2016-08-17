@@ -42,7 +42,7 @@ public class NPFNetwork: APIClient {
      
      - parameter URL: The URL where the data is retrived from in String format.
      
-     Return: An instance of NPFNetwork for fetching data.
+     - return: An instance of NPFNetwork for fetching data.
      */
     public convenience init(URL: String) {
         self.init(config: URLSessionConfiguration.default(), URL: URL)

@@ -143,7 +143,7 @@ public class NPFLocation: NSObject, CLLocationManagerDelegate {
     /**
      Gets the location the device is in (i.e. Apple Store). Returns "N/A" if there is an error getting the location name.
      
-     Returns: A String with the location name.
+     - returns: A String with the location name.
      */
     public func getLocationName() -> String {
         var returnName: String = "N/A"
@@ -165,7 +165,7 @@ public class NPFLocation: NSObject, CLLocationManagerDelegate {
     /**
      Gets the street the device is on. Returns "N/A" if there is an error getting the street.
      
-     Returns: A String with the street name.
+     - returns: A String with the street name.
      */
     public func getStreetAddress() -> String {
         var returnAddress: String = "N/A"

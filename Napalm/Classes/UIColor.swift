@@ -19,7 +19,7 @@ public extension UIColor {
      - parameter blue: A CGFloat between 0 and 255 which defines how much blue is in the color.
      - parameter alpha: A CGFloat between 0 and 1 which defines how much opacity is in the color.
     
-     Return: A UIColor defined by the values passed in.
+     - return: A UIColor defined by the values passed in.
      */
     public class func rgba(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> UIColor {
         
@@ -34,7 +34,7 @@ public extension UIColor {
      - parameter brightness: A CGFloat between 0 and 100 which defines how bright the color is.
      - parameter alpha: A CGFloat between 0 and 1 which defines how much opacity is in the color.
      
-     Return: A UIColor defined by the values passed in.
+     - return: A UIColor defined by the values passed in.
      */
     public class func hsba(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) -> UIColor {
         
