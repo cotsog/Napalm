@@ -12,6 +12,7 @@ import BluetoothKit
 /**
  Allows interacting with other devices via LEB.
 */
+@available(iOS 10.0, *)
 public class NPFBluetooth: BKAvailabilityObserver, BKCentralDelegate, BKPeripheralDelegate {
     
     /**

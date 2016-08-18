@@ -4,7 +4,7 @@
 
 # Napalm
 
-[![CI Status](http://img.shields.io/travis/Caleb/Napalm.svg?style=flat)](https://travis-ci.org/Caleb/Napalm)
+[![CI Status](https://travis-ci.org/Napalm-Framework/Napalm.svg?branch=master)](https://travis-ci.org/Napalm-Framework)
 [![Version](https://img.shields.io/cocoapods/v/Napalm.svg?style=flat)](http://cocoapods.org/pods/Napalm)
 [![License](https://img.shields.io/cocoapods/l/Napalm.svg?style=flat)](http://cocoapods.org/pods/Napalm)
 [![Platform](https://img.shields.io/cocoapods/p/Napalm.svg?style=flat)](http://cocoapods.org/pods/Napalm)
