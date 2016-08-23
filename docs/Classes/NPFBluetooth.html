@@ -14,7 +14,7 @@
     <a title="NPFBluetooth Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (88% documented)</p>
+        <p><a href="../index.html"> Docs</a> (100% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -41,6 +41,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NPFBluetooth.html">NPFBluetooth</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NPFBluetooth/InitilizationError.html">– InitilizationError</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NPFLocation.html">NPFLocation</a>
@@ -297,10 +300,6 @@
                       <div class="abstract">
                         <p>Initilizes an instance of NPFBluetooth with a serviceUUID and a characteristicUUID.</p>
 
-<ul>
-<li><p>return: An instance of NPFBluetooth with a serviceUUID and a characteristicUUID.</p></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -343,6 +342,11 @@
                           </tbody>
                         </table>
                       </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An instance of NPFBluetooth with a serviceUUID and a characteristicUUID.</p>
+
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -359,9 +363,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Informs the observer about a change in Bluetooth LE availability.
-- parameter availabilityObservable: The object that registered the availability change.
-- parameter availability: The new availability value.</p>
+                        <p>Informs the observer about a change in Bluetooth LE availability.</p>
 
                       </div>
                       <div class="declaration">
@@ -421,9 +423,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Informs the observer that the cause of Bluetooth LE unavailability changed.
-- parameter availabilityObservable: The object that registered the cause change.
-- parameter unavailabilityCause: The new cause of unavailability.</p>
+                        <p>Informs the observer that the cause of Bluetooth LE unavailability changed.</p>
 
                       </div>
                       <div class="declaration">
@@ -483,9 +483,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Called when a remote peripheral disconnects or is disconnected.
-- parameter central: The central from which it disconnected.
-- parameter remotePeripheral: The remote peripheral that disconnected.</p>
+                        <p>Called when a remote peripheral disconnects or is disconnected.</p>
 
                       </div>
                       <div class="declaration">
@@ -545,9 +543,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Called when a remote central connects and is ready to receive data.
-- parameter peripheral: The peripheral object to which the remote central connected.
-- parameter remoteCentral: The remote central that connected.</p>
+                        <p>Called when a remote central connects and is ready to receive data.</p>
 
                       </div>
                       <div class="declaration">
@@ -607,9 +603,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Called when a remote central disconnects and can no longer receive data.
-- parameter peripheral: The peripheral object from which the remote central disconnected.
-- parameter remoteCentral: The remote central that disconnected.</p>
+                        <p>Called when a remote central disconnects and can no longer receive data.</p>
 
                       </div>
                       <div class="declaration">
@@ -659,6 +653,34 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:OC11NapalmJazzy12NPFBluetooth18InitilizationError"></a>
+                    <a name="//apple_ref/swift/Enum/InitilizationError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:OC11NapalmJazzy12NPFBluetooth18InitilizationError">InitilizationError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Errors that are thrown if an error occures when creating a central or peripheral.</p>
+
+                        <a href="../Classes/NPFBluetooth/InitilizationError.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">InitilizationError</span><span class="p">:</span> <span class="kt">ErrorProtocol</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:FC11NapalmJazzy12NPFBluetooth16createPeripheralFzT8withNameSS_T_"></a>
                     <a name="//apple_ref/swift/Method/createPeripheral(withName:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:FC11NapalmJazzy12NPFBluetooth16createPeripheralFzT8withNameSS_T_">createPeripheral(withName:)</a>
@@ -673,7 +695,7 @@
 
 <div class="aside aside-throws">
     <p class="aside-title">Throws</p>
-    <p><code>InitilizationError.peripheralCreationError</code> if an error occured while creating the peripheral.</p>
+    <p><code><a href="../Classes/NPFBluetooth/InitilizationError.html#/s:FOC11NapalmJazzy12NPFBluetooth18InitilizationError23peripheralCreationErrorFMS1_S1_">InitilizationError.peripheralCreationError</a></code> if an error occured while creating the peripheral.</p>
 
 </div>
 
@@ -726,7 +748,7 @@
 
 <div class="aside aside-throws">
     <p class="aside-title">Throws</p>
-    <code>InitilizationError.centralCreationError</code> if an error occured while creating the central.
+    <code><a href="../Classes/NPFBluetooth/InitilizationError.html#/s:FOC11NapalmJazzy12NPFBluetooth18InitilizationError20centralCreationErrorFMS1_S1_">InitilizationError.centralCreationError</a></code> if an error occured while creating the central.
 
 </div>
 

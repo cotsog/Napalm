@@ -14,7 +14,7 @@
     <a title="APIClient Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (88% documented)</p>
+        <p><a href="../index.html"> Docs</a> (100% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -41,6 +41,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NPFBluetooth.html">NPFBluetooth</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NPFBluetooth/InitilizationError.html">– InitilizationError</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NPFLocation.html">NPFLocation</a>
@@ -160,14 +163,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The configuration of the current session</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">APIClient</span></code></pre>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt">URLSessionConfiguration</span></code></pre>
 
                         </div>
                       </div>
@@ -187,14 +190,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The session used to get the data.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">APIClient</span></code></pre>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">URLSession</span></code></pre>
 
                         </div>
                       </div>
@@ -217,12 +220,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Attempts to get the JSON data from a request.</p>
+                        <p>Designed for getting JSON data from a request.</p>
 
                       </div>
                       <h4>Default Implementation</h4>
                       <div class="default_impl abstract">
-                        <p>Undocumented</p>
+                        <p>Attempts to get the JSON data from a request.</p>
 
                       </div>
                       <div class="declaration">
@@ -268,7 +271,7 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>A URLSessionDataTask with the data if it is received.</p>
+                        <p>A URLSessionDataTask.</p>
 
                       </div>
                     </section>
@@ -290,12 +293,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Parses the JSON data from jsonTask and passes it to the completion.</p>
+                        <p>Designed for parsing JSON and using it in the completion.</p>
 
                       </div>
                       <h4>Default Implementation</h4>
                       <div class="default_impl abstract">
-                        <p>Undocumented</p>
+                        <p>Parses the JSON data from jsonTask and passes it to the completion</p>
 
                       </div>
                       <div class="declaration">

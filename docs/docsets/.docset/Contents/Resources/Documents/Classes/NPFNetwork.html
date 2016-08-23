@@ -14,7 +14,7 @@
     <a title="NPFNetwork Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (88% documented)</p>
+        <p><a href="../index.html"> Docs</a> (100% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -41,6 +41,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NPFBluetooth.html">NPFBluetooth</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NPFBluetooth/InitilizationError.html">– InitilizationError</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NPFLocation.html">NPFLocation</a>
@@ -160,14 +163,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The configuration of the current session</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">NPFNetwork</span><span class="p">:</span> <span class="kt"><a href="../Protocols/APIClient.html">APIClient</a></span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt">URLSessionConfiguration</span></code></pre>
 
                         </div>
                       </div>
@@ -187,14 +190,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The session used to get the data.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">NPFNetwork</span><span class="p">:</span> <span class="kt"><a href="../Protocols/APIClient.html">APIClient</a></span></code></pre>
+                          <pre class="highlight"><code><span class="kd">lazy</span> <span class="kd">public</span> <span class="k">var</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">URLSession</span> <span class="o">=</span></code></pre>
 
                         </div>
                       </div>
@@ -243,8 +246,6 @@
                       <div class="abstract">
                         <p>Creates an instance of NPFNetwork.</p>
 
-<p>Return: An instance of NPFNetwork for fetching data.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -287,6 +288,11 @@
                           </tbody>
                         </table>
                       </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An instance of NPFNetwork for fetching data.</p>
+
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -304,10 +310,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Creates an instance of NPFNetwork with the default session configuration.</p>
-
-<ul>
-<li><p>return: An instance of NPFNetwork for fetching data.</p></li>
-</ul>
 
                       </div>
                       <div class="declaration">
@@ -337,6 +339,11 @@
                             </tr>
                           </tbody>
                         </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An instance of NPFNetwork for fetching data.</p>
+
                       </div>
                     </section>
                   </div>
