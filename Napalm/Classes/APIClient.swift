@@ -5,6 +5,11 @@
 //  Created by Caleb Kleveter on 7/6/16.
 //
 //
+//
+// Copyright (c) 2016 Treehouse Island Inc. <help@teamtreehouse.com>
+//
+// Used with permission.
+
 
 import Foundation
 

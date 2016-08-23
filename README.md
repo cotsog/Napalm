@@ -36,6 +36,10 @@ You can get the commit number from [here](https://github.com/Napalm-Framework/Na
 
 You can find documentation [here](https://napalm-framework.github.io/Napalm/docs/index.html).
 
+## Slimming
+
+If you don't need all of the code that come with this pod, you can save space by going [here](https://github.com/Napalm-Framework/Napalm/tree/master/Napalm/Classes) and copying the contents of the file to your project.
+
 ## Attribution
 
 Thnks to all the [contributers](https://github.com/Napalm-Framework/Napalm/blob/master/Example/Attribution.md)!
