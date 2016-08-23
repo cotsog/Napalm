@@ -90,7 +90,7 @@ public class NPFLocation: NSObject, CLLocationManagerDelegate {
      
      - returns: A tuple of optional floats. `(latitude: Float?, longitude: Float?)`.
     */
-    public func coordinate() -> (latitude: Float?, longitude: Float?) {
+    public var coordinate: (latitude: Float?, longitude: Float?) {
         guard let lat = locationManager.location?.coordinate.latitude,
             let long = locationManager.location?.coordinate.longitude else {
                 return (latitude: nil, longitude: nil)
@@ -107,7 +107,7 @@ public class NPFLocation: NSObject, CLLocationManagerDelegate {
      
      - returns: A String with the city's name.
     */
-    public func getCity() -> String {
+    public var currentCity: String {
         var returnCity: String = "N/A"
         let geoCoder = CLGeocoder()
         let location = CLLocation(latitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!)
@@ -129,7 +129,7 @@ public class NPFLocation: NSObject, CLLocationManagerDelegate {
      
      - returns: A String with the country's name.
      */
-    public func getCountry() -> String {
+    public var currentCountry: String {
         var returnCountry: String = "N/A"
         let geoCoder = CLGeocoder()
         let location = CLLocation(latitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!)
@@ -151,7 +151,7 @@ public class NPFLocation: NSObject, CLLocationManagerDelegate {
      
      - returns: An optional Int with the zip code name.
      */
-    public func getZip() -> Int? {
+    public var currntZip: Int? {
         var returnZip: Int? = nil
         let geoCoder = CLGeocoder()
         let location = CLLocation(latitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!)
@@ -173,7 +173,7 @@ public class NPFLocation: NSObject, CLLocationManagerDelegate {
      
      - returns: A String with the location name.
      */
-    public func getLocationName() -> String {
+    public var currentLocationName: String {
         var returnName: String = "N/A"
         let geoCoder = CLGeocoder()
         let location = CLLocation(latitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!)
@@ -195,7 +195,7 @@ public class NPFLocation: NSObject, CLLocationManagerDelegate {
      
      - returns: A String with the street name.
      */
-    public func getStreetAddress() -> String {
+    public var currentStreetAddress: String {
         var returnAddress: String = "N/A"
         let geoCoder = CLGeocoder()
         let location = CLLocation(latitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!)

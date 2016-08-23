@@ -37,6 +37,8 @@ import UIKit
 
 public extension UIView {
     
+// ******************************** UI (User Interface) *********************************** //
+    
     /**
      This enum is used to set the depth value of the GradientView for the addGradient function.
      */
@@ -165,6 +167,36 @@ public extension UIView {
         
         
     }
+    
+    
+// ******************************** Geometry *********************************** //
+    
+    public var topRightCorner: CGPoint {
+        return CGPoint(x: self.frame.size.width, y: 0)
+    }
+    
+    public var bottomRightCorner: CGPoint {
+        return CGPoint(x: self.frame.size.width, y: self.frame.size.height)
+    }
+    
+    public var bottomLeftCorner: CGPoint {
+        return CGPoint(x: 0, y: self.frame.size.height)
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

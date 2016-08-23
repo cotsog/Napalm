@@ -64,7 +64,7 @@ public extension Double {
      
      - returns: A Double in radian form
     */
-    public func convertToRaidians() -> Double {
+    public var inRaidians: Double {
         return (self / 180) * Double.pi
     }
 }
@@ -76,7 +76,7 @@ public extension CGFloat {
      
      - returns: A CGFloat in radian form
      */
-    public func convertToRaidians() -> CGFloat {
+    public var inRaidians: CGFloat {
         return (self / 180) * CGFloat.pi
     }
 }
