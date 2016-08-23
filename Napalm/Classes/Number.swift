@@ -55,16 +55,38 @@ public class NPFNumber {
         }
         
     }
-    
-    
+}
+
+
+public extension Double {
     /**
-     Converts a number in degrees to a number in raidians.
+     Converts a Double from degrees to radians.
      
-     - parameter degrees: A Double that is the number converted to raidians.
-    
-     - returns: A number in raidian form.
+     - returns: A Double in radian form
     */
-    public class func convertToRadians(degrees: Double) -> Double {
-       return  (degrees / 180) * Double.pi
+    public func convertToRaidians() -> Double {
+        return (self / 180) * Double.pi
     }
 }
+
+public extension CGFloat {
+    
+    /**
+     Converts a CGFloat from degrees to radians.
+     
+     - returns: A CGFloat in radian form
+     */
+    public func convertToRaidians() -> CGFloat {
+        return (self / 180) * CGFloat.pi
+    }
+}
+
+
+
+
+
+
+
+
+
+
