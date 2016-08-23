@@ -89,10 +89,39 @@ public class NPFBluetooth: BKAvailabilityObserver, BKCentralDelegate, BKPeripher
         characteristic = characteristicUUID
     }
     
+    /**
+     Informs the observer about a change in Bluetooth LE availability.
+     - parameter availabilityObservable: The object that registered the availability change.
+     - parameter availability: The new availability value.
+     */
     public func availabilityObserver(_ availabilityObservable: BKAvailabilityObservable, availabilityDidChange availability: BKAvailability) {}
+    
+    /**
+     Informs the observer that the cause of Bluetooth LE unavailability changed.
+     - parameter availabilityObservable: The object that registered the cause change.
+     - parameter unavailabilityCause: The new cause of unavailability.
+     */
     public func availabilityObserver(_ availabilityObservable: BKAvailabilityObservable, unavailabilityCauseDidChange unavailabilityCause: BKUnavailabilityCause) {}
+    
+    /**
+     Called when a remote peripheral disconnects or is disconnected.
+     - parameter central: The central from which it disconnected.
+     - parameter remotePeripheral: The remote peripheral that disconnected.
+     */
     public func central(_ central: BKCentral, remotePeripheralDidDisconnect remotePeripheral: BKRemotePeripheral) {}
+    
+    /**
+     Called when a remote central connects and is ready to receive data.
+     - parameter peripheral: The peripheral object to which the remote central connected.
+     - parameter remoteCentral: The remote central that connected.
+     */
     public func peripheral(_ peripheral: BKPeripheral, remoteCentralDidConnect remoteCentral: BKRemoteCentral) {}
+    
+    /**
+     Called when a remote central disconnects and can no longer receive data.
+     - parameter peripheral: The peripheral object from which the remote central disconnected.
+     - parameter remoteCentral: The remote central that disconnected.
+     */
     public func peripheral(_ peripheral: BKPeripheral, remoteCentralDidDisconnect remoteCentral: BKRemoteCentral) {}
     
     /**

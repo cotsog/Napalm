@@ -37,29 +37,93 @@ public class NPFAudio {
     
     /**
      This enum is used in setting the proper file type in the playSimpleAudio function.
-     */
+    */
     public enum SimpleAudioFileType {
+        
+        /**
+         For 'simple' audio files with the .wav extension
+        */
         case wav
+        
+        /**
+         For 'simple' audio files with the .caf extension
+        */
         case caf
+        
+        /**
+         For 'simple' audio files with the .aif extension
+        */
         case aif
     }
     
     /**
      This enum is used in setting the proper file type in the playAudio function.
-     */
+    */
     public enum AudioFileType {
+        
+        /**
+         For audio files with the .m4a extension
+        */
         case m4a
+        
+        /**
+         For audio files with the .mp3 extension
+        */
         case mp3
+        
+        /**
+         For audio files with the .acc extension
+         */
         case acc
+        
+        /**
+         For audio files with the .m4b extension
+         */
         case m4b
+        
+        /**
+         For audio files with the .m4p extension
+         */
         case m4p
+        
+        /**
+         For audio files with the .m4v extension
+         */
         case m4v
+        
+        /**
+         For audio files with the .m4r extension
+         */
         case m4r
+        
+        /**
+         For audio files with the .mp4 extension
+         */
         case mp4
+        
+        /**
+         For audio files with the .ac3 extension
+         */
         case ac3
+        
+        /**
+         For audio files with the .eac3 extension
+         */
         case eac3
+        
+        /**
+         For audio files with the .ilbc extension
+         */
         case ilbc
+        
+        /**
+         For audio files with the .lbc extension
+         */
         case lbc
+        
+        /**
+         For audio files with the .ima4 extension
+         */
         case ima4
     }
     
