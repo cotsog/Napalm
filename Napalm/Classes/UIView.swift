@@ -41,7 +41,15 @@ public extension UIView {
      This enum is used to set the depth value of the GradientView for the addGradient function.
      */
     public enum UIViewDepth {
+        
+        /**
+         For when the view being added as a subview should be in the front.
+        */
         case front
+        
+        /**
+         For when the view being added as a subview should be in the back.
+         */
         case back
     }
     

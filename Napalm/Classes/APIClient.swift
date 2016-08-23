@@ -47,7 +47,15 @@ public typealias JSONTask = URLSessionDataTask
  The resault of parsing the JSON worked.
 */
 public enum APIResult<T> {
+    
+    /**
+     When the resault of fethcing JSON is succesfull.
+    */
     case success(T)
+    
+    /**
+     When fetching JSON fails.
+    */
     case failure(ErrorProtocol)
 }
 
@@ -72,21 +80,29 @@ public protocol JSONDecodable {
  Used to connect to the remote API to get JSON data.
 */
 public protocol APIClient {
+    
+    /**
+     The configuration of the current session
+    */
     var configuration: URLSessionConfiguration { get }
+    
+    /**
+     The session used to get the data.
+    */
     var session: URLSession { get }
     
     /**
-     Attempts to get the JSON data from a request.
+     Designed for getting JSON data from a request.
      
      - parameter request: A URLRequest created from a URL to get the data from.
      - parameter completion: A closure with the JSON data, an HTTPURLResponse and an NSError.
      
-     - returns: A URLSessionDataTask with the data if it is received.
+     - returns: A URLSessionDataTask.
      */
     func jsonTask(withRequest request: URLRequest, completion: JSONTaskCompletion) -> JSONTask
     
     /**
-     Parses the JSON data from jsonTask and passes it to the completion.
+     Designed for parsing JSON and using it in the completion.
      
      - parameter request: A URLRequest made from a URL.
      - parameter parse: A closure where the JSON data gets converted to the proper type.
@@ -97,6 +113,9 @@ public protocol APIClient {
 
 extension APIClient {
     
+    /**
+     Attempts to get the JSON data from a request.
+    */
     public func jsonTask(withRequest request: URLRequest, completion: JSONTaskCompletion) -> JSONTask {
         
         let task = session.dataTask(with: request) { data, response, error in
@@ -132,6 +151,9 @@ extension APIClient {
         return task
     }
     
+    /**
+     Parses the JSON data from jsonTask and passes it to the completion
+    */
     public func fetch<T>(_ request: URLRequest, parse: (JSON) -> T?, completion: (APIResult<T>) -> Void) {
         
         let task = jsonTask(withRequest: request) { json, response, error in

@@ -38,7 +38,15 @@ public class NPFLocation: NSObject, CLLocationManagerDelegate {
      Used in the getPermissionFromUser method for when the app needs permission to get the location of the device.
     */
     public enum GetAppLocation {
+        
+        /**
+         For specifying that the device location should only be found when the app is in use.
+        */
         case whenInUse
+        
+        /**
+         For specifying that the device location should be found at any time.
+        */
         case always
     }
     
@@ -54,7 +62,7 @@ public class NPFLocation: NSObject, CLLocationManagerDelegate {
      
      - parameter locationManger: Used in getting the devices location.
      
-     - return: An instance of NPFLocation with a location manager.
+     - returns: An instance of NPFLocation with a location manager.
     */
     public init (locationManger: CLLocationManager) {
         self.locationManager = locationManger
@@ -80,7 +88,7 @@ public class NPFLocation: NSObject, CLLocationManagerDelegate {
     /**
      Gets the devices coordinates.
      
-     - returns: A tuple of optional floats. (latitude: Float?, longitude: Float?).
+     - returns: A tuple of optional floats. `(latitude: Float?, longitude: Float?)`.
     */
     public func coordinate() -> (latitude: Float?, longitude: Float?) {
         guard let lat = locationManager.location?.coordinate.latitude,

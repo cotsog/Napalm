@@ -40,7 +40,7 @@ public class NPFNumber {
      - parameter lowNumber: The bottom number of the range in which the random Int will be selected.
      - parameter highNumber: The top number of the range in which the random Int will be selected.
      
-     - return: A random number selected between the top and bottom numbers.
+     - returns: A random number selected between the top and bottom numbers.
      */
     public class func randomNumber(between lowNumber: Int, and highNumber: Int) -> Int {
         if #available(iOS 9.0, *) {

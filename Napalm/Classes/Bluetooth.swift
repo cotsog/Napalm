@@ -82,7 +82,7 @@ public class NPFBluetooth: BKAvailabilityObserver, BKCentralDelegate, BKPeripher
      - parameter serviceUUID: A String with a UUID for the service.
      - parameter characteristicUUID: A String with a UUID for the characteristic.
      
-     - return: An instance of NPFBluetooth with a serviceUUID and a characteristicUUID.
+     - returns: An instance of NPFBluetooth with a serviceUUID and a characteristicUUID.
     */
     public init(serviceUUID: String, characteristicUUID: String) {
         service = serviceUUID
@@ -91,6 +91,7 @@ public class NPFBluetooth: BKAvailabilityObserver, BKCentralDelegate, BKPeripher
     
     /**
      Informs the observer about a change in Bluetooth LE availability.
+     
      - parameter availabilityObservable: The object that registered the availability change.
      - parameter availability: The new availability value.
      */
@@ -98,6 +99,7 @@ public class NPFBluetooth: BKAvailabilityObserver, BKCentralDelegate, BKPeripher
     
     /**
      Informs the observer that the cause of Bluetooth LE unavailability changed.
+     
      - parameter availabilityObservable: The object that registered the cause change.
      - parameter unavailabilityCause: The new cause of unavailability.
      */
@@ -105,6 +107,7 @@ public class NPFBluetooth: BKAvailabilityObserver, BKCentralDelegate, BKPeripher
     
     /**
      Called when a remote peripheral disconnects or is disconnected.
+     
      - parameter central: The central from which it disconnected.
      - parameter remotePeripheral: The remote peripheral that disconnected.
      */
@@ -112,6 +115,7 @@ public class NPFBluetooth: BKAvailabilityObserver, BKCentralDelegate, BKPeripher
     
     /**
      Called when a remote central connects and is ready to receive data.
+     
      - parameter peripheral: The peripheral object to which the remote central connected.
      - parameter remoteCentral: The remote central that connected.
      */
@@ -119,6 +123,7 @@ public class NPFBluetooth: BKAvailabilityObserver, BKCentralDelegate, BKPeripher
     
     /**
      Called when a remote central disconnects and can no longer receive data.
+     
      - parameter peripheral: The peripheral object from which the remote central disconnected.
      - parameter remoteCentral: The remote central that disconnected.
      */
@@ -127,8 +132,16 @@ public class NPFBluetooth: BKAvailabilityObserver, BKCentralDelegate, BKPeripher
     /**
      Errors that are thrown if an error occures when creating a central or peripheral.
     */
-    enum InitilizationError: ErrorProtocol {
+    public enum InitilizationError: ErrorProtocol {
+        
+        /**
+         For when an error occures when creating the peripheral
+        */
         case peripheralCreationError
+        
+        /**
+         For when an error occures when creating the central
+        */
         case centralCreationError
     }
     

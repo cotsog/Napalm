@@ -39,8 +39,14 @@ import Foundation
 */
 public class NPFNetwork: APIClient {
     
+    /**
+     The configuration of the current session
+     */
     public let configuration: URLSessionConfiguration
     
+    /**
+     The session used to get the data.
+    */
     lazy public var session: URLSession = {
         return URLSession(configuration: self.configuration)
     }()
@@ -56,7 +62,7 @@ public class NPFNetwork: APIClient {
      - parameter config: A URLSessionConfiguration.
      - parameter URL: The URL where the data is retrived from in String format.
      
-     Return: An instance of NPFNetwork for fetching data.
+     - returns: An instance of NPFNetwork for fetching data.
     */
     public init(config: URLSessionConfiguration, URL: String) {
         self.configuration = config
@@ -68,7 +74,7 @@ public class NPFNetwork: APIClient {
      
      - parameter URL: The URL where the data is retrived from in String format.
      
-     - return: An instance of NPFNetwork for fetching data.
+     - returns: An instance of NPFNetwork for fetching data.
      */
     public convenience init(URL: String) {
         self.init(config: URLSessionConfiguration.default(), URL: URL)

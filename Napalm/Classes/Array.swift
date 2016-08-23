@@ -34,7 +34,7 @@ public extension Array {
     /**
      Randomly selects a random item from an array and returns it.
      
-     - return: An element that was randomly selected from the array.
+     - returns: An element that was randomly selected from the array.
      */
     public func random() -> Element {
         if #available(iOS 9.0, *) {
