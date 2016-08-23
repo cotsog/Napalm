@@ -14,7 +14,7 @@
     <a title="NPFBluetooth Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (66% documented)</p>
+        <p><a href="../index.html"> Docs</a> (88% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -75,6 +75,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Enums/APIResult.html">APIResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ArrayType.html">ArrayType</a>
               </li>
             </ul>
           </li>
@@ -356,16 +359,51 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Informs the observer about a change in Bluetooth LE availability.
+- parameter availabilityObservable: The object that registered the availability change.
+- parameter availability: The new availability value.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">NPFBluetooth</span><span class="p">:</span> <span class="kt">BKAvailabilityObserver</span><span class="p">,</span> <span class="kt">BKCentralDelegate</span><span class="p">,</span> <span class="kt">BKPeripheralDelegate</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">availabilityObserver</span><span class="p">(</span><span class="n">_</span> <span class="nv">availabilityObservable</span><span class="p">:</span> <span class="kt">BKAvailabilityObservable</span><span class="p">,</span> <span class="n">availabilityDidChange</span> <span class="nv">availability</span><span class="p">:</span> <span class="kt">BKAvailability</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>availabilityObservable</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The object that registered the availability change.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>availability</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new availability value.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -383,16 +421,51 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Informs the observer that the cause of Bluetooth LE unavailability changed.
+- parameter availabilityObservable: The object that registered the cause change.
+- parameter unavailabilityCause: The new cause of unavailability.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">NPFBluetooth</span><span class="p">:</span> <span class="kt">BKAvailabilityObserver</span><span class="p">,</span> <span class="kt">BKCentralDelegate</span><span class="p">,</span> <span class="kt">BKPeripheralDelegate</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">availabilityObserver</span><span class="p">(</span><span class="n">_</span> <span class="nv">availabilityObservable</span><span class="p">:</span> <span class="kt">BKAvailabilityObservable</span><span class="p">,</span> <span class="n">unavailabilityCauseDidChange</span> <span class="nv">unavailabilityCause</span><span class="p">:</span> <span class="kt">BKUnavailabilityCause</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>availabilityObservable</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The object that registered the cause change.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>unavailabilityCause</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new cause of unavailability.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -410,16 +483,51 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Called when a remote peripheral disconnects or is disconnected.
+- parameter central: The central from which it disconnected.
+- parameter remotePeripheral: The remote peripheral that disconnected.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">NPFBluetooth</span><span class="p">:</span> <span class="kt">BKAvailabilityObserver</span><span class="p">,</span> <span class="kt">BKCentralDelegate</span><span class="p">,</span> <span class="kt">BKPeripheralDelegate</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">central</span><span class="p">(</span><span class="n">_</span> <span class="nv">central</span><span class="p">:</span> <span class="kt">BKCentral</span><span class="p">,</span> <span class="n">remotePeripheralDidDisconnect</span> <span class="nv">remotePeripheral</span><span class="p">:</span> <span class="kt">BKRemotePeripheral</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>central</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The central from which it disconnected.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>remotePeripheral</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The remote peripheral that disconnected.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -437,16 +545,51 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Called when a remote central connects and is ready to receive data.
+- parameter peripheral: The peripheral object to which the remote central connected.
+- parameter remoteCentral: The remote central that connected.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">NPFBluetooth</span><span class="p">:</span> <span class="kt">BKAvailabilityObserver</span><span class="p">,</span> <span class="kt">BKCentralDelegate</span><span class="p">,</span> <span class="kt">BKPeripheralDelegate</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">peripheral</span><span class="p">(</span><span class="n">_</span> <span class="nv">peripheral</span><span class="p">:</span> <span class="kt">BKPeripheral</span><span class="p">,</span> <span class="n">remoteCentralDidConnect</span> <span class="nv">remoteCentral</span><span class="p">:</span> <span class="kt">BKRemoteCentral</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>peripheral</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The peripheral object to which the remote central connected.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>remoteCentral</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The remote central that connected.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -464,16 +607,51 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Called when a remote central disconnects and can no longer receive data.
+- parameter peripheral: The peripheral object from which the remote central disconnected.
+- parameter remoteCentral: The remote central that disconnected.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">NPFBluetooth</span><span class="p">:</span> <span class="kt">BKAvailabilityObserver</span><span class="p">,</span> <span class="kt">BKCentralDelegate</span><span class="p">,</span> <span class="kt">BKPeripheralDelegate</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">peripheral</span><span class="p">(</span><span class="n">_</span> <span class="nv">peripheral</span><span class="p">:</span> <span class="kt">BKPeripheral</span><span class="p">,</span> <span class="n">remoteCentralDidDisconnect</span> <span class="nv">remoteCentral</span><span class="p">:</span> <span class="kt">BKRemoteCentral</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>peripheral</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The peripheral object from which the remote central disconnected.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>remoteCentral</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The remote central that disconnected.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
