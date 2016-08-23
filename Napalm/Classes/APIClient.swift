@@ -55,6 +55,10 @@ public enum APIResult<T> {
  Used as a constraint for the generic types in the fetch and fetchData methods.
 */
 public protocol JSONDecodable {
+    
+    /**
+     An initilizer allowing the properties of the class to be initilized from JSON
+    */
     init?(JSON: [String : AnyObject])
 }
 

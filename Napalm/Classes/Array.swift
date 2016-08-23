@@ -52,22 +52,48 @@ public extension Array {
      Creates an Array with elements from the array this is called on.
      
      - parameter length: The length of the array returned.
+     - parameter attribute: A value of type ArrayType that specifies if you want no repeating or duplicate elements in the array that is returned.
      - returns: A randomly generated array of the type of Element.
      
      */
-    public func randomArray(withLength length: Int) -> [Element] {
+    public func randomArray(withLength length: Int, andAttribute attribute: ArrayType? = nil) -> [Element] {
         var returnArray: [Element] = []
         var currentObject: Element
         
-        while returnArray.count < length {
-            if let lsObj = returnArray.last {
-                repeat {
-                    currentObject = self.random()
-                } while "\(currentObject)" == "\(lsObj)"
+        if let attribute = attribute {
+            if attribute == .noDuplicates {
+                if self.count >= length {
+                    
+                    var parsingArray = self
+                    while returnArray.count < length {
+                        currentObject = parsingArray.random()
+                        returnArray.append(currentObject)
+                        parsingArray.remove(currentObject)
+                    }
+                } else {
+                    print("\n\(Date.init()) Napalm: - New array length is out of the bounds of the old array length.\n")
+                    fatalError()
+                }
+            } else if attribute == .noRepeats {
+        
+                while returnArray.count < length {
+                    if let lsObj = returnArray.last {
+                        repeat {
+                            currentObject = self.random()
+                        } while "\(currentObject)" == "\(lsObj)"
+                    } else {
+                        currentObject = self.random()
+                    }
+                    returnArray.append(currentObject)
+                }
             } else {
-                currentObject = self.random()
+                print("\n\(Date.init()) Napalm: - An unknown ArrayType case was passed in.\n")
+                fatalError()
             }
-            returnArray.append(currentObject)
+        } else {
+            while returnArray.count < length {
+                returnArray.append(self.random())
+            }
         }
         return returnArray
     }
@@ -88,5 +114,33 @@ public extension Array {
         }
     }
 }
+
+/**
+ Used for specifying the attributes of an array with the randomArray method.
+*/
+public enum ArrayType {
+    /**
+     For when you don't want an element used in the array more then once.
+    */
+    case noDuplicates
+    
+    /**
+     For when you don't want an element used more then once in a row in an array. (It can still appear more then once)
+    */
+    case noRepeats
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
