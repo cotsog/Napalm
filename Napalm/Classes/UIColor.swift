@@ -60,4 +60,15 @@ public extension UIColor {
         
         return UIColor(hue: hue/360.0, saturation: saturation/100.0, brightness: brightness/100.0, alpha: alpha)
     }
+    
+    /**
+     Extracts the red, green, blue, and alpha values from a UIColor.
+     
+     - returns: A tuple containing the individual values labeled red, green, blue and alpha.
+    */
+    var components: (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)? {
+        var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
+        let didGetComponents = getRed(&r, green: &g, blue: &b, alpha: &a)
+        return didGetComponents ? (r,g,b,a) : nil
+    }
 }

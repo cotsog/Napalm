@@ -42,7 +42,7 @@ If you don't need all of the code that come with this pod, you can save space by
 
 ## Attribution
 
-Thnks to all the [contributers](https://github.com/Napalm-Framework/Napalm/blob/master/Example/Attribution.md)!
+Thanks to all the [contributers](https://github.com/Napalm-Framework/Napalm/blob/master/Example/Attribution.md)!
 
 ## Author
 
