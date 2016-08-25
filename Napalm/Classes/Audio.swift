@@ -38,7 +38,7 @@ public class NPFAudio {
     /**
      This enum is used in setting the proper file type in the playSimpleAudio function.
     */
-    public enum SimpleAudioFileType {
+    public enum SimpleAudioFileType: String {
         
         /**
          For 'simple' audio files with the .wav extension
@@ -59,7 +59,7 @@ public class NPFAudio {
     /**
      This enum is used in setting the proper file type in the playAudio function.
     */
-    public enum AudioFileType {
+    public enum AudioFileType: String {
         
         /**
          For audio files with the .m4a extension
@@ -137,15 +137,7 @@ public class NPFAudio {
         
         var sound: SystemSoundID = 0
         
-        var fileExtension: String {
-            switch fileExtension {
-            case .wav: return "wav"
-            case .caf: return "caf"
-            case .aif: return "aif"
-            }
-        }
-        
-        guard let path = Bundle.main().pathForResource(fileName, ofType: fileExtension) else {
+        guard let path = Bundle.main().pathForResource(fileName, ofType: fileExtension.rawValue) else {
             return
         }
         
@@ -165,25 +157,7 @@ public class NPFAudio {
         
         let player = AVQueuePlayer()
         
-        var fileExtension: String {
-            switch fileExtension {
-            case .m4a: return "m4a"
-            case .mp3: return "mp3"
-            case .acc: return "acc"
-            case .m4b: return "m4b"
-            case .m4p: return "m4p"
-            case .m4v: return "m4v"
-            case .mp4: return "mp4"
-            case .ac3: return "ac3"
-            case .eac3: return "eac3"
-            case .ilbc: return "ilbc"
-            case .lbc: return "lbc"
-            case .ima4: return "ima4"
-            case .m4r: return "m4r"
-            }
-        }
-        
-        guard let path = Bundle.main().pathForResource(fileName, ofType: fileExtension) else {
+        guard let path = Bundle.main().pathForResource(fileName, ofType: fileExtension.rawValue) else {
             return
         }
         
