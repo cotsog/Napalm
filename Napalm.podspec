@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'Napalm'
-s.version          = '0.4.5'
+s.version          = '0.5.5'
 s.summary          = 'A CocoaPod to boost your workflow and put code at an even higher level.'
 
 # This description is used to generate tags and improve search results.

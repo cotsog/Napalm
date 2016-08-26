@@ -71,8 +71,7 @@ public extension Array {
                         parsingArray.remove(currentObject)
                     }
                 } else {
-                    print("\n\(Date.init()) Napalm: - New array length is out of the bounds of the old array length.\n")
-                    fatalError()
+                    fatalError("\n\(Date.init()) Napalm: - New array length is out of the bounds of the old array length.\n")
                 }
             } else if attribute == .noRepeats {
         
@@ -87,8 +86,7 @@ public extension Array {
                     returnArray.append(currentObject)
                 }
             } else {
-                print("\n\(Date.init()) Napalm: - An unknown ArrayType case was passed in.\n")
-                fatalError()
+                fatalError("\n\(Date.init()) Napalm: - An unknown ArrayType case was passed in.\n")
             }
         } else {
             while returnArray.count < length {
