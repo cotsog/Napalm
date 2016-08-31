@@ -12,6 +12,9 @@ Thanks to all the help from various people who knowingly and un-knowingly helped
 [Leo Dabus][7]
 - [UIColor components][8]
 
+[Maxim Shoustin][9]
+- [Email regex][10]
+
 [1]: http://stackoverflow.com/users/1716763/joefryer
 [2]: http://stackoverflow.com/questions/26527411/blur-uiimage-to-achieve-effect-like-passcode-blur-of-the-wallpaper-with-swift
 [3]: https://github.com/rhummelmose
@@ -20,3 +23,5 @@ Thanks to all the help from various people who knowingly and un-knowingly helped
 [6]: https://teamtreehouse.com/library/network-programming-with-swift-2
 [7]: http://stackoverflow.com/users/2303865/leo-dabus
 [8]: http://stackoverflow.com/questions/28532564/extract-rgb-values-from-uicolor/28532880#28532880
+[9]: http://stackoverflow.com/users/1631379/maxim-shoustin
+[10]: http://stackoverflow.com/questions/25471114/how-to-validate-an-e-mail-address-in-swift
