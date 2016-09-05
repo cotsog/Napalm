@@ -38,5 +38,5 @@ s.source_files = 'Napalm/Classes/**/*'
 
 # s.public_header_files = 'Pod/Classes/**/*.h'
 s.frameworks = 'UIKit', 'Foundation', 'AudioToolbox', 'AVFoundation', 'GameplayKit', 'CoreLocation'
-s.dependency 'BluetoothKit', '~> 0.3.0'
+# s.dependency 'BluetoothKit', '~> 0.3.0'
 end
